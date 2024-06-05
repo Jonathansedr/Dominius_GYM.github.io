@@ -20,13 +20,11 @@
                 <a href="#comodidades" onclick="seleccionar()">Comodidades</a>
                 <a href="#equipo" onclick="seleccionar()">Equipo</a>
                 <a href="#contacto" onclick="seleccionar()">Contacto</a>
-            </nav>
-            <div class="redes">
-                <a href="https://www.facebook.com/profile.php?id=61556946720689"><i class="fa-brands fa-facebook-f"></i></a>
+                 <a href="https://www.facebook.com/profile.php?id=61556946720689"><i class="fa-brands fa-facebook-f"></i></a>
                 <a href="https://www.instagram.com/dominiusgym/"><i class="fa-brands fa-square-instagram"></i>
                 <a href="ejem.html"><i class="fa-solid fa-cart-shopping"></i></a>
                 <a href="juego.html"><i class="fa fa-gamepad" aria-hidden="true"></i></a>
-            </div>
+            </nav>
             <!-- Icono del menu responsive -->
             <div id="icono-nav" class="nav-responsive" onclick="mostrarOcultarMenu()">
                 <i class="fa-solid fa-bars"></i>
@@ -334,6 +332,23 @@
             </div>
         </div>
     </footer>
-    <script src="app.js"></script>
+    <script>
+        let menuVisible = false;
+//Función que oculta o muestra el menu
+function mostrarOcultarMenu(){
+    if(menuVisible){
+        document.getElementById("nav").classList ="";
+        menuVisible = false;
+    }else{
+        document.getElementById("nav").classList ="responsive";
+        menuVisible = true;
+    }
+}
+function seleccionar(){
+    //oculto el menu una vez que selecciono una opcion
+    document.getElementById("nav").classList = "";
+    menuVisible = false;
+}
+    </script>
 </body>
 </html>
